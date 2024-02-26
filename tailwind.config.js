@@ -16,7 +16,8 @@ module.exports = {
     },
     extend: {
       colors:{
-        primary:'#FE6192',
+        primary:'#5d38e0',
+        secondary:'#3ddae5',
         error:'#F05252',
         success:'#0E9F6E',
         warning:'#FF5A1F',
@@ -36,12 +37,12 @@ module.exports = {
     plugin(({ addBase }) =>  {
       addBase({
       html: {
-        '--background':'#3E3483',
-        '--surface':'#ffffff',
+        '--background':'#fffefe',
+        '--surface':'#f0eefc',
         '--onSurface':'rgb(243 244 246)',
-        '--mainText':'#ffffff',
-        '--subText':'rgb(209 213 219)',
-        '--contentMainText':'rgb(31 41 55)',
+        '--mainText':'#1b2534',
+        '--subText':'#fffefe',
+        '--contentMainText':'#a4a0b4',
         '--contentSubText':'rgb(75 85 99)',
       },
       '.dark' : {
