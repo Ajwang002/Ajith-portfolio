@@ -80,7 +80,7 @@ button:focus-visible {
 } */
 body {
   color: var(--subText);
-  background-color: var(--surface);
+  background-color: var(--background);
   margin: auto;
   padding: auto;
 }
