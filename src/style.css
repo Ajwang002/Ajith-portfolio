@@ -83,4 +83,5 @@ body {
   background-color: var(--background);
   margin: auto;
   padding: auto;
+  overflow: visible !important;
 }

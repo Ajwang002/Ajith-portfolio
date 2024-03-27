@@ -3,7 +3,7 @@ import DropDown from '@/components/DropDown.vue'
 
 export default {
     install(app: App) {
-      // Globally register the MyComponent1 component
+      // Globally register the component
       app.component('DropDown', DropDown);
     }
   };

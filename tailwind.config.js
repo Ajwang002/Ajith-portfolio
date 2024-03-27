@@ -16,19 +16,22 @@ module.exports = {
     },
     extend: {
       colors:{
-        primary:'#5d38e0',
-        secondary:'#3ddae5',
+        primary:'#219ca7',
+        primary_2:'#17848a',
+        primary_3:'#0a6c75',
+        dark_primary:'#0c4f54',
+        secondary:'#b5e056',
+        sub_secondary:'#1d2519',
         error:'#F05252',
         success:'#0E9F6E',
         warning:'#FF5A1F',
         info:'#3F83F8',
         background:'var(--background)',
         surface:'var(--surface)',
-        onSurface:"var(--onSurface)",
         mainText:'var(--mainText)',
         subText:'var(--subText)',
-        contentMainText:'var(--contentMainText)',
-        contentSubText:'var(--contentSubText)'
+        mainText_2:'var(--mainText_2)',
+        subText_2:'var(--subText_2)'
       }
     },
   },
@@ -37,22 +40,20 @@ module.exports = {
     plugin(({ addBase }) =>  {
       addBase({
       html: {
-        '--background':'#fffefe',
-        '--surface':'#f0eefc',
-        '--onSurface':'rgb(243 244 246)',
-        '--mainText':'#1b2534',
-        '--subText':'#fffefe',
-        '--contentMainText':'#a4a0b4',
-        '--contentSubText':'rgb(75 85 99)',
+        '--background':'#fafafb',
+        '--surface':'#161817',
+        '--mainText':'#219ca7',
+        '--subText':'#161817',
+        '--mainText_2':'#ffffff',
+        '--subText_2':'#b5e056',
       },
       '.dark' : {
-        '--background':'#3E3483',
-        '--surface':'rgb(31 41 55)',
-        '--onSurface':'rgb(55 65 81)',
-        '--mainText':'#ffffff',
-        '--subText':'rgb(209 213 219)',
-        '--contentMainText':'#ffffff',
-        '--contentSubText':'rgb(209 213 219)',
+        '--background':'#fafafb',
+        '--surface':'#161817',
+        '--mainText':'#219ca7',
+        '--subText':'#161817',
+        '--mainText_2':'#ffffff',
+        '--subText_2':'#b5e056',
       }
     }),
 

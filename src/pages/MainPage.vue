@@ -1,13 +1,13 @@
 <template>
     <div class="w-full h-full box-border">
-        <Navigation class="w-full"/>
+      <HeaderSection class="w-full h-screen"/>
     </div>
 </template>
 <script setup lang="ts">
 // ------------- Import's ------------- //
 import {onMounted} from 'vue'
 import { initFlowbite } from 'flowbite'
-import Navigation from '@/pages/Navigation.vue'
+import HeaderSection from '@/pages/HeaderSection.vue'
 
 
 
