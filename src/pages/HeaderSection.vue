@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-fit-content bg-no-repeat bg-fixed m-0" style="background-image: url('src/assets/images/BG_Sample-1.png'); background-size: 100% 100%;">
+    <div class="w-full h-fit-content bg-no-repeat m-0" style="background-image: url('src/assets/images/BG_Sample-1.png'); background-size: 100% 100%;">
         <nav class="max-w-screen-2xl mx-auto flex justify-between items-center py-5">
             <!-- Name Logo Section -->
             <div>
