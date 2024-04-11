@@ -84,4 +84,5 @@ body {
   margin: auto;
   padding: auto;
   overflow: visible !important;
+  user-select: none !important;
 }
