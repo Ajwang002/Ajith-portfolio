@@ -1,11 +1,11 @@
 <template>
-    <div class="w-full h-auto py-12 font-sans text-xs">
+    <div class="w-full h-auto py-12 font-sans text-xs flex flex-col gap-4">
 
         <!-- Top Section -->
-        <section class="grid grid-cols-2 gap-4">
+        <section class="grid grid-cols-2 gap-4 h-[300px]">
 
             <!-- Profile Column -->
-            <div class="p-7 pb-9 backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-row gap-5 rounded-2xl ">
+            <div class="p-7 pb-9 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-row gap-5 rounded-2xl ">
                 <div class="basis-1/2">
                     <img src="../assets/images/Aj Logo.png" class="h-44"/>
                 </div>
@@ -71,7 +71,81 @@
                 </div>
             </div>
         </section>
+
+        <!-- Middle Section -->
+        <section class="grid grid-cols-4 gap-4 h-[300px]">
+
+            <!-- CV Download Section -->
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+                <div class="basis-9/12 overflow-hidden flex items-center justify-center">
+                    <img src="../assets/images/cvDownload.png" class="w-auto h-[180px] object-contain mx-auto"/>
+                </div>
+
+                <div class="basis-3/12 flex justify-between items-end">
+                    <div class="flex flex-col items-start">
+                        <div class="text-slate-100/50">
+                            MY CV
+                        </div>
+                        <div class="text-slate-100 text-2xl font-bold">
+                            Download
+                        </div>
+                    </div>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
+                        <ArrowDownTrayIcon class="text-text w-6 h-6"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Providing Section -->
+            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+                <div class="basis-9/12 grid grid-cols-2 gap-4">
+                    <div>
+                        <img src="../assets/images/webDesign.png" class="w-auto h-[180px] object-contain mx-auto"/>
+                    </div>
+                    <div>
+                        <img src="../assets/images/webDevelopemnt.png" class="w-auto h-[180px] object-contain mx-auto"/>
+                    </div>
+                </div>
+
+                <div class="basis-3/12 flex justify-between items-end">
+                    <div class="flex flex-col items-start">
+                        <div class="text-slate-100/50">
+                            SPECIALIZATION
+                        </div>
+                        <div class="text-slate-100 text-2xl font-bold">
+                            Services Offering
+                        </div>
+                    </div>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
+                        <span class="font-medium">Lets go</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Social Media Profile Section -->
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+                <div class="basis-9/12 overflow-hidden flex items-center justify-center">
+                    <img src="../assets/images/cvDownload.png" class="w-auto h-[180px] object-contain mx-auto"/>
+                </div>
+
+                <div class="basis-3/12 flex justify-between items-end">
+                    <div class="flex flex-col items-start">
+                        <div class="text-slate-100/50">
+                            MY CV
+                        </div>
+                        <div class="text-slate-100 text-2xl font-bold">
+                            Download
+                        </div>
+                    </div>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
+                        <ArrowDownTrayIcon class="text-text w-6 h-6"/>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 <script setup lang="ts">
+import { ArrowDownTrayIcon  } from '@heroicons/vue/24/solid'
 </script>
