@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full">
-        <ContentView/>
+    <div class="w-full h-auto">
+        <ContentView class="w-full h-fit"/>
     </div>
 </template>
 <script setup lang="ts">
