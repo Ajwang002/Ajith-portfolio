@@ -12,8 +12,9 @@ import './index.css'
 const app = createApp(App)
 
 app.use(ComponentRegisterPlugins)
-app.use(router)
 app.use(IconPlugin)
+app.use(router)
+
 
 app.mount('#app')
 

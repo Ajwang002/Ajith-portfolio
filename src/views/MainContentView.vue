@@ -169,7 +169,7 @@
                             Let's
                         </div>
                         <div class="text-text text-5xl font-bold">
-                            Work <span class="text-text text-green-500">together.</span>
+                            Work <span class="text-green-500">together.</span>
                         </div>
                     </div>
                     <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">

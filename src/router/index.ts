@@ -7,6 +7,17 @@ const router = createRouter({
             name:'Home',
             component: () => import('@/pages/MainPage.vue')
         },
+        // {
+        //     path:'/contacts',
+        //     name:'Home',
+        //     component: () => import('@/pages/MainPage.vue')
+        // },
+        // Catch-all route
+        {
+            path: '/:pathMatch(.*)*',
+            name:'Home',
+            component: () => import('@/pages/MainPage.vue')
+        }
     ],
 
 })

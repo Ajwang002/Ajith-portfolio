@@ -1,15 +1,15 @@
 <template>
-    <div class="w-full pt-1">
-        <nav class="flex justify-between items-center flex-wrap p-3 rounded-3xl">
+    <div class="w-full h-20 bg-[#242424]">
+        <nav class="h-full flex justify-between items-center flex-wrap p-3 rounded-3xl">
             <!-- Left Logo Side -->
-            <div class="flex justify-center gap-2 items-center">
+            <div class="flex justify-center gap-2 items-center cursor-pointer">
                 <img src="../assets/images/Aj Logo.svg" class="w-10"/>
-                <span class="text-4xl font-bold font-sans text-text tracking-[-4px]">Ajith</span>
+                <span class="text-4xl font-bold font-sans text-text tracking-[-2px]">Ajith</span>
             </div>
 
             <!-- Center Navigation button-->
             <div class="flex items-center gap-8">
-                <div v-for="link in navigationLinks" :keys="link" class="flex flex-col gap-1 group text-slate-100/50">
+                <div v-for="link in navigationLinks" :keys="link" class="flex flex-col gap-1 group text-slate-100/50" @click="useNavigation(link.href)">
                     <span class="relative w-fit block cursor-pointer font-sans font-medium
                     after:block after:content-[''] after:absolute after:h-[2px] after:bg-green-600 after:w-full
                     after:scale-x-0 after:transition after:duration-300 after:origin-left
@@ -26,12 +26,16 @@
     </div>
 </template>
 <script setup lang="ts">
-// -------------- Navigation Links -------------- //
+// ------------------- Imports ------------------- //
+import {useNavigation} from '@/composables/CommonFunctions'
+
+
+// -------------- Working Variable's-------------- //
 const navigationLinks = [
-    {'title': 'Home'},
-    {'title': 'About'},
-    {'title': 'Services'},
-    {'title': 'Works'},
-    {'title': 'Contact'},
+    {'title': 'Home', href: '/home'},
+    {'title': 'About', href:'/home'},
+    {'title': 'Services', href:'/home'},
+    {'title': 'Works', href:'/home'},
+    {'title': 'Contact', href: '/contacts'},
 ]
 </script>
