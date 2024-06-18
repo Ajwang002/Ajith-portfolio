@@ -3,7 +3,7 @@
 
         <!-- Contact info section -->
         <section class="grid grid-cols-6 gap-4">
-            <div v-for="(contact, idx) in contactInfo" :key="contact.title" class="w-full flex flex-col gap-2 items-center" :class="idx=== 2 ? 'col-span-2' : ''">
+            <div v-for="(contact, idx) in contactInfo" :key="idx" class="w-full flex flex-col gap-2 items-center" :class="idx=== 2 ? 'col-span-2' : ''">
                 <div v-if="contact.icon" class="w-20 h-20 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex items-center justify-center rounded-md">
                     <Unicon :name="contact.icon" fill="#fff" width="32" height="32"/>
                 </div>

@@ -4,7 +4,7 @@ const router = createRouter({
     routes:[
         {
             path:'/',
-            redirect: to => {
+            redirect: () => {
                 return {path: '/home'}
             }
         },

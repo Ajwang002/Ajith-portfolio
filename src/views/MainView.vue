@@ -6,7 +6,7 @@
 </template>
 <script setup lang="ts">
 // ---------- Imports ---------- //
-import { shallowRef, watchEffect } from 'vue';
+import { defineComponent, shallowRef, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import MainContent from './MainContentView.vue'
 import Contact from './ContactView.vue'
@@ -18,7 +18,7 @@ const route = useRoute()
 
 
 // ---------- Working Variable's ---------- //
-const page = shallowRef(MainContent)
+const page = shallowRef<ReturnType<typeof defineComponent> | undefined>(MainContent)
 const pages = [
     {name: 'home', page: MainContent},
     {name: 'contacts', page: Contact},
