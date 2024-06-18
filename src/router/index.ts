@@ -4,9 +4,26 @@ const router = createRouter({
     routes:[
         {
             path:'/',
+            redirect: () => {
+                return {path: '/home'}
+            }
+        },
+        {
+            path:'/home',
             name:'Home',
             component: () => import('@/pages/MainPage.vue')
         },
+        // {
+        //     path:'/contacts',
+        //     name:'Home',
+        //     component: () => import('@/pages/MainPage.vue')
+        // },
+        // Catch-all route
+        {
+            path: '/:pathMatch(.*)*',
+            name:'Home',
+            component: () => import('@/pages/MainPage.vue')
+        }
     ],
 
 })
