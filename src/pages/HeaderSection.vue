@@ -1,8 +1,8 @@
 <template>
     <div class="w-full h-fit-content bg-no-repeat m-0">
         <section class="w-full">
-            <NavigationPage class="sticky top-0 z-10 overflow-hidden"/>
-            <MainView/>
+            <NavigationPage class="sticky top-0 z-10 overflow-hidden w-full"/>
+            <MainView class="w-full h-fit"/>
         </section>
     </div>
 </template>

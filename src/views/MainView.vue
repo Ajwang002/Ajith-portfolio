@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-auto">
+    <div class="w-full h-fit">
         <component :is="page" class="w-full h-fit"/>
         <FooterView class="w-full h-fit"/>
     </div>
@@ -9,7 +9,7 @@
 import { shallowRef, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import MainContent from './MainContentView.vue'
-import Contact from '@/pages/ContactPage.vue'
+import Contact from './ContactView.vue'
 import FooterView from './FooterView.vue'
 
 

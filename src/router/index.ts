@@ -4,6 +4,12 @@ const router = createRouter({
     routes:[
         {
             path:'/',
+            redirect: to => {
+                return {path: '/home'}
+            }
+        },
+        {
+            path:'/home',
             name:'Home',
             component: () => import('@/pages/MainPage.vue')
         },
