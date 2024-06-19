@@ -23,7 +23,6 @@
             </div>
         </section>
 
-
         <!-- Right Section -->
         <section class="about-section col-span-8 w-full flex flex-col gap-4">
 
@@ -93,23 +92,21 @@
                 </div>
             </div>
 
-
             <!-- Skill Section -->
             <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">SKILL</div>
-                <!-- :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' " -->
-                
-                    <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col">
-                        <div class="text-start text-text text-lg">{{ skill.title }}</div>
-                        <template class="w-full grid grid-cols-12 gap-6 p-5">
-                            <div v-for="item in skill.skill" :key="item.name" class="w-full flex flex-col items-start gap-2 col-span-6">
-                                <div class="text-xl text-text">{{ item.name }}</div>
-                                <div class="w-full bg-slate-100/10 rounded-full dark:bg-gray-700">
-                                    <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item.value}`}"> {{ item.value }}</div>
-                                </div>
+
+                <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col">
+                    <div class="text-start text-text text-lg">{{ skill.title }}</div>
+                    <template class="w-full grid grid-cols-12 gap-6 p-5">
+                        <div v-for="item in skill.skill" :key="item.name" class="w-full flex flex-col items-start gap-2 col-span-6">
+                            <div class="text-xl text-text">{{ item.name }}</div>
+                            <div class="w-full bg-slate-100/10 rounded-full dark:bg-gray-700">
+                                <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item.value}`}"> {{ item.value }}</div>
                             </div>
-                        </template>
-                    </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </section>
     </div>
@@ -176,7 +173,6 @@ const skillDetails = ref([
             {name: 'Type Script' , value: '85%'},
         ]
     },
-
 ])
 </script>
 <style scoped>
