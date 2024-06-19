@@ -9,11 +9,11 @@
 
             <!-- Center Navigation button-->
             <div class="flex items-center gap-8">
-                <div v-for="link in navigationLinks" :keys="link" class="flex flex-col gap-1 group text-slate-100/50" @click="useNavigation(link.href)">
+                <div v-for="link in navigationLinks" :keys="link" class="flex flex-col gap-1 group " :class="link.href.includes(activePath) ? 'text-green-500' : 'text-slate-100/50'"  @click="useNavigation(link.href)">
                     <span class="relative w-fit block cursor-pointer font-sans font-medium
-                    after:block after:content-[''] after:absolute after:h-[2px] after:bg-green-600 after:w-full
+                    after:block after:content-[''] after:absolute after:h-[2px] after:bg-green-500 after:w-full
                     after:scale-x-0 after:transition after:duration-300 after:origin-left
-                    group-hover:text-green-600 after:group-hover:scale-x-100">{{ link['title'] }}
+                    group-hover:text-green-500 after:group-hover:scale-x-100" >{{ link['title'] }}
                     </span>
                 </div>
             </div>
@@ -27,15 +27,30 @@
 </template>
 <script setup lang="ts">
 // ------------------- Imports ------------------- //
+import { watchEffect, ref } from 'vue';
+import { useRoute } from 'vue-router';
 import {useNavigation} from '@/composables/CommonFunctions'
 
+
+// ------------------- Helping Constant ------------------- //
+const route = useRoute()
 
 // -------------- Working Variable's-------------- //
 const navigationLinks = [
     {'title': 'Home', href: '/home'},
-    {'title': 'About', href:'/home'},
+    {'title': 'About', href:'/about'},
     {'title': 'Services', href:'/home'},
     {'title': 'Works', href:'/home'},
     {'title': 'Contact', href: '/contacts'},
 ]
+const activePath = ref('home')
+
+// ---------- Watch ---------- //
+watchEffect(() =>{
+    var path = route.path
+    if(path)
+    {
+        activePath.value = path.split('/')[1]
+    }
+})
 </script>

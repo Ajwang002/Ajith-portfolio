@@ -2,9 +2,9 @@
 import { App } from 'vue';
 import Unicon from 'vue-unicons';
 // @ts-ignore
-import { uniInstagram, uniLinkedin, uniTwitter, uniEnvelopeAlt, uniPhone, uniMapMarker } from 'vue-unicons/dist/icons';
+import { uniInstagram, uniLinkedin, uniTwitter, uniEnvelopeAlt, uniPhone, uniMapMarker, uniCalender, uniCalendarSlash, uniSuitcaseAlt, uniBuilding, uniGraduationCap, uniBookOpen  } from 'vue-unicons/dist/icons';
 
-Unicon.add([uniInstagram, uniLinkedin, uniTwitter, uniEnvelopeAlt, uniPhone, uniMapMarker]);
+Unicon.add([uniInstagram, uniLinkedin, uniTwitter, uniEnvelopeAlt, uniPhone, uniMapMarker, uniCalender, uniCalendarSlash, uniSuitcaseAlt, uniBuilding, uniGraduationCap, uniBookOpen ]);
 
 const iconPlugin = {
   install(app: App) {
