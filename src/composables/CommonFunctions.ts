@@ -4,7 +4,7 @@ import router from '@/router/index'
 
 // ------------------- Common Functions ------------------- //
 const useNavigation = (path: string) =>{
-    if(path && path.trim()?.length)
+    if(path)
     {
         router.push(path)
     }
