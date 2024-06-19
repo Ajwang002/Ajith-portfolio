@@ -10,6 +10,7 @@ import { defineComponent, shallowRef, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import MainContent from './MainContentView.vue'
 import Contact from './ContactView.vue'
+import About from './AboutView.vue'
 import FooterView from './FooterView.vue'
 
 
@@ -21,6 +22,7 @@ const route = useRoute()
 const page = shallowRef<ReturnType<typeof defineComponent> | undefined>(MainContent)
 const pages = [
     {name: 'home', page: MainContent},
+    {name: 'about', page: About},
     {name: 'contacts', page: Contact},
 ]
 
