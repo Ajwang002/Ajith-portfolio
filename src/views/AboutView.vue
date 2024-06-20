@@ -134,7 +134,7 @@
                             Credentials
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none" @click="useNavigation('/credential')">
                         <span class="font-medium">Lets go</span>
                     </div>
                 </div>
@@ -145,6 +145,7 @@
 <script setup lang="ts">
 // -------------- imports -------------- //
 import { ref } from 'vue';
+import {useNavigation} from '@/composables/CommonFunctions'
 
 
 // -------------- Working Variable's -------------- //
