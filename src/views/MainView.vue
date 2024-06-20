@@ -11,6 +11,7 @@ import { useRoute } from 'vue-router';
 import MainContent from './MainContentView.vue'
 import Contact from './ContactView.vue'
 import About from './AboutView.vue'
+import Credential from './CredentialView.vue'
 import FooterView from './FooterView.vue'
 
 
@@ -24,6 +25,7 @@ const pages = [
     {name: 'home', page: MainContent},
     {name: 'about', page: About},
     {name: 'contacts', page: Contact},
+    {name: 'credential', page:Credential}
 ]
 
 
