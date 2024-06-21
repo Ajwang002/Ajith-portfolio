@@ -39,7 +39,7 @@ const route = useRoute()
 const navigationLinks = [
     {'title': 'Home', href: '/home'},
     {'title': 'About', href:'/about'},
-    {'title': 'Services', href:'/home'},
+    {'title': 'Services', href:'/service'},
     {'title': 'Works', href:'/home'},
     {'title': 'Contact', href: '/contacts'},
 ]
