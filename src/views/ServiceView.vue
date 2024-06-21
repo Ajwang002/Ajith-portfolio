@@ -21,7 +21,7 @@
                     <div class="text-4xl">{{ selectedService?.splitName[0] }} <span v-if="selectedService?.splitName[1]" class="text-green-500">{{ selectedService?.splitName[1] }}</span></div>
                     <div class="text-justify text-slate-100/50">{{ selectedService?.content }}</div>
                     <div class="flex items-center gap-4 text-text text-sm">
-                        <div v-for="(keyword, idx) in selectedService?.keyWords" :key="keyword" class="rounded-2xl px-5 py-1.5"  :style="`background:${keyWordsColors[selectedService?.index]?.[idx]?.['opc']}`">
+                        <div v-for="(keyword, idx) in selectedService?.keyWords" :key="keyword" class="rounded-2xl px-5 py-1.5" :style="`background: ${keywordBgClr(idx)}`">
                             <span class="text-sm font-semibold" >{{ keyword }}</span>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                         <div class="text-slate-100/50">
                             MORE ABOUT ME
                         </div>
-                        <div class="text-slate-100 text-2xl font-bold">
+                        <div class="text-slate-100 teservice && {index: number}xt-2xl font-bold">
                             Credentials
                         </div>
                     </div>
@@ -107,7 +107,19 @@ const colorGen = new useColorGenerator()
 
 
 // -------------- Working Variable's -------------- //
-const services = ref([
+
+interface service {
+    name : string
+    icon : string
+    value : string
+    splitName : string []
+    content : string
+    keyWords : string []
+}
+
+type ServiceWithIndex = service & { index: number | undefined };
+
+const services = ref<service[]>([
     {
         name: 'Web Development',
         icon:'brackets-curly',
@@ -126,13 +138,12 @@ const services = ref([
     },
 ])
 
-const selectedService = ref<object>(services.value[0])
-
+const selectedService = ref<ServiceWithIndex | null>(null)
+selectedService.value = {...services.value[0], index: 0}
 
 // -------------- Working Function's -------------- //
 const onSelectService = (idx: number) =>{
-    var dup_serv = services.value[idx]
-    dup_serv['index'] = idx
+    var dup_serv:ServiceWithIndex  = {... JSON.parse(JSON.stringify(services.value[idx])), index: idx}
     selectedService.value = {...dup_serv}
 }
 
@@ -142,8 +153,21 @@ const getKeyWordsColors = ():void =>{
     for(var i=0; i<services.value.length; i++)
     {
         var keyWordsLen = services.value?.[i]?.keyWords.length
-        var colors = colorGen.genMulpUniColors(keyWordsLen, 0.3)
+        var colors = colorGen.genMulpUniColors(keyWordsLen, 0.6)
         keyWordsColors.value[i] = colors
+    }
+}
+
+const keywordBgClr = (idx:number) =>{
+    var selectedIndex = selectedService.value?.index
+    // @ts-ignore
+    var colorsCollection = keyWordsColors.value[selectedIndex]
+    if(colorsCollection?.length > 0)
+    {
+        return colorsCollection[idx]?.['opc']
+    }
+    else{
+        return 'none'
     }
 }
 
