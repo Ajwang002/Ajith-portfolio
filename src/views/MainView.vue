@@ -13,6 +13,7 @@ import Contact from './ContactView.vue'
 import About from './AboutView.vue'
 import Credential from './CredentialView.vue'
 import Service from './ServiceView.vue'
+import Work from './WorkView.vue'
 import FooterView from './FooterView.vue'
 
 
@@ -27,7 +28,8 @@ const pages = [
     {name: 'about', page: About},
     {name: 'contacts', page: Contact},
     {name: 'credential', page:Credential},
-    {name: 'service', page:Service}
+    {name: 'service', page:Service},
+    {name: 'work', page: Work}
 ]
 
 

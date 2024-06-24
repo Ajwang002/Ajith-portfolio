@@ -6,7 +6,7 @@
         </div>
 
         <div class="flex items-center gap-8 text-sm">
-            <div v-for="link in footerNavLink" :keys="link.title" class="flex flex-col gap-1 group text-slate-100/50">
+            <div v-for="link in navigationLinks" :keys="link.title"  class=" flex flex-col gap-1 group text-slate-100/50"  @click="useNavigation(link.href)">
                 <span class="relative w-fit block cursor-pointer font-sans font-medium
                 after:block after:content-[''] after:absolute after:h-[2px] after:bg-green-600 after:w-full
                 after:scale-x-0 after:transition after:duration-300 after:origin-left
@@ -19,15 +19,27 @@
     </div>
 </template>
 <script setup lang="ts">
+// ------------------- Imports ------------------- //
+import { watchEffect, ref } from 'vue';
+import { useRoute } from 'vue-router';
+import {useNavigation} from '@/composables/CommonFunctions'
+import {navigationLinks} from '@/utils/constants'
 
-const footerNavLink =[
-    {'title': 'Home'},
-    {'title': 'About'},
-    {'title': 'Services'},
-    {'title': 'Works'},
-    {'title': 'Contact'},
-]
 
+// ------------------- Helping Constant ------------------- //
+const route = useRoute()
+
+// -------------- Working Variable's-------------- //
+const activePath = ref('home')
 const date = new Date()
 const currentYear = date.getFullYear()
+
+// ---------- Watch ---------- //
+watchEffect(() =>{
+    var path = route.path
+    if(path)
+    {
+        activePath.value = path.split('/')[1]
+    }
+})
 </script>

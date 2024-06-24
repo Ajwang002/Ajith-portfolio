@@ -30,19 +30,13 @@
 import { watchEffect, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import {useNavigation} from '@/composables/CommonFunctions'
+import {navigationLinks} from '@/utils/constants'
 
 
 // ------------------- Helping Constant ------------------- //
 const route = useRoute()
 
 // -------------- Working Variable's-------------- //
-const navigationLinks = [
-    {'title': 'Home', href: '/home'},
-    {'title': 'About', href:'/about'},
-    {'title': 'Services', href:'/service'},
-    {'title': 'Works', href:'/home'},
-    {'title': 'Contact', href: '/contacts'},
-]
 const activePath = ref('home')
 
 // ---------- Watch ---------- //
