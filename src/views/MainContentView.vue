@@ -5,7 +5,14 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- Profile Column -->
-            <div class="p-7 pb-9 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-row gap-5 rounded-2xl ">
+            <div class="p-7 pb-9 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-row gap-5 rounded-2xl "
+            v-motion
+            :initial="{ opacity: 0, y: 500 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="100"
+            :duration="1000">
                 <div class="basis-1/2">
                     <img src="../assets/images/Aj Logo.png" class="h-44"/>
                 </div>
@@ -22,14 +29,28 @@
             </div>
 
             <div class="flex flex-col gap-4">
-                <div class="basis-2/12 p-2 px-5 backdrop-blur-sm  bg-gradient-to-br from-slate-500/20 to-slate-500/10 text-slate-100/50 rounded-2xl overflow-y-hidden">
+                <div class="basis-2/12 p-2 px-5 backdrop-blur-sm  bg-gradient-to-br from-slate-500/20 to-slate-500/10 text-slate-100/50 rounded-2xl overflow-y-hidden"
+                v-motion
+                :initial="{ opacity: 0, y: -500 }"
+                :enter="{ opacity: 1, y: 0, scale: 1 }"
+                :variants="{ custom: { scale: 2 } }"
+                :hovered="{ }"
+                :delay="100"
+                :duration="1000">
                     <div class="h-full overflow-y-hidden uppercase flex items-center">
                         <marquee>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cumque ducimus dicta temporibus atque, sit nulla cum quas perferendis ut reiciendis voluptates, ex ad, accusamus expedita? Eaque suscipit aliquid pariatur!</marquee>
                     </div>
                 </div>
 
                 <div class="basis-10/12 flex gap-4">
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl">
+                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+                    v-motion
+                    :initial="{ opacity: 0, x: 500 }"
+                    :enter="{ opacity: 1, x: 0, scale: 1 }"
+                    :variants="{ custom: { scale: 2 } }"
+                    :hovered="{ }"
+                    :delay="100"
+                    :duration="1000">
                         <div class="basis-8/12 overflow-hidden flex items-center justify-center">
                             <img src="../assets/images/Aj Logo.svg" class="w-full h-20 mx-auto"/>
                         </div>
@@ -49,7 +70,14 @@
                         </div>
                     </div>
 
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl">
+                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+                    v-motion
+                    :initial="{ opacity: 0, x: -500 }"
+                    :enter="{ opacity: 1, x: 0, scale: 1 }"
+                    :variants="{ custom: { scale: 2 } }"
+                    :hovered="{ }"
+                    :delay="100"
+                    :duration="1000">
                         <div class="basis-8/12 overflow-hidden flex items-center justify-center">
                             <img src="../assets/images/Aj Logo.svg" class="w-full h-20 mx-auto"/>
                         </div>
@@ -76,7 +104,14 @@
         <section class="grid grid-cols-4 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500 }"
+            :enter="{ opacity: 1, x: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-9/12 overflow-hidden flex items-center justify-center">
                     <img src="../assets/images/cvDownload.png" class="w-auto h-[126px] object-contain mx-auto"/>
                 </div>
@@ -97,7 +132,14 @@
             </div>
 
             <!-- Service Providing Section -->
-            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, scale: 0 }"
+            :enter="{ opacity: 1, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-9/12 grid grid-cols-2 gap-4">
                     <div>
                         <img src="../assets/images/webDesign.png" class="w-auto h-[126px] object-contain mx-auto"/>
@@ -124,7 +166,14 @@
 
 
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -500 }"
+            :enter="{ opacity: 1, x: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-9/12 w-full overflow-hidden flex justify-between items-center">
                     <div v-for="icon in ['instagram', 'linkedin', 'twitter']" :key="icon" class="w-3/12 aspect-square flex justify-center items-center  bg-slate-200/70 rounded-full cursor-pointer">
                         <Unicon :name="icon" fill="#64748b" hover-fill="#fff" width="32" height="32" />
@@ -151,7 +200,14 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 w-full flex justify-between gap-2 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 w-full flex justify-between gap-2 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -500, y:-500 }"
+            :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="200"
+            :duration="1000">
                 <div v-for="data in experienceDetails" :key="data.value" class="w-4/12 h-full p-7 rounded-2xl bg-gradient-to-br from-slate-600/20 to-slate-600/10  flex flex-col gap-2 justify-center items-center">
                     <span class="text-5xl text-text">{{ data.value }}</span>
                     <span class="text-slate-100/50">{{ data.title }}</span>
@@ -159,7 +215,14 @@
             </div>
 
             <!-- Service Providing Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500, y:-500 }"
+            :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="200"
+            :duration="1000">
                 <div class="basis-5/12 grid grid-cols-2 gap-4">
                 </div>
 

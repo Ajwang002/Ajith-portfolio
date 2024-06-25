@@ -3,13 +3,34 @@
 
         <!-- Profile & summary section -->
         <section class="grid grid-cols-3 gap-4 h-[250px] items-center">
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex justify-center rounded-2xl">
+            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex justify-center rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, y: 500 }"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="100"
+            :duration="1000">
                 <img src="../assets/images/Aj Logo.png" class="h-44 w-44"/>
             </div>
 
             <div class="col-span-2 flex flex-col gap-4 h-full">
-                <div class="text-5xl text-text text-center">SELF-SUMMARY</div>
-                <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-4 items-start rounded-2xl">
+                <div class="text-5xl text-text text-center"
+                v-motion
+                :initial="{ opacity: 0, x: 500 }"
+                :enter="{ opacity: 1, x: 0, scale: 1 }"
+                :variants="{ custom: { scale: 2 } }"
+                :hovered="{ }"
+                :delay="100"
+                :duration="1000">SELF-SUMMARY</div>
+                <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-4 items-start rounded-2xl"
+                v-motion
+                :initial="{ opacity: 0, y: -500 }"
+                :enter="{ opacity: 1, y: 0, scale: 1 }"
+                :variants="{ custom: { scale: 2 } }"
+                :hovered="{ }"
+                :delay="100"
+                :duration="1000">
                     <div class="text-4xl">Ajithkumar <span class="text-green-500">Venkatraman</span></div>
                     <div class="text-justify text-slate-100/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, in voluptate cumque, magnam molestias quas similique aliquid officiis minima consequatur natus consequuntur architecto nihil? Quas alias nemo fuga id aliquam!
                     </div>
@@ -21,7 +42,14 @@
         <section class="grid grid-cols-2 gap-4 h-[250px] items-center">
 
             <!-- Experience Part -->
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl">
+            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -500, y:-500 }"
+            :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="200"
+            :duration="1000">
                 <div class="text-2xl">EXPERIENCE</div>
                 <div v-for="experience in experienceDetails" :key="experience.role" >
                     <div class="flex items-center gap-4">
@@ -48,7 +76,14 @@
 
 
             <!-- Educational Part -->
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl">
+            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500, y:-500 }"
+            :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="200"
+            :duration="1000">
                 <div class="text-2xl">EDUCATION</div>
                 <div v-for="education in educationDetails" :key="education.degree" >
                     <div class="flex items-center gap-4">
@@ -77,7 +112,14 @@
         <!-- Bottom section -->
         <section class="grid grid-cols-4 gap-4 h-[250px]">
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500 }"
+            :enter="{ opacity: 1, x: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-9/12 w-full overflow-hidden flex justify-between items-center">
                     <div v-for="icon in ['instagram', 'linkedin', 'twitter']" :key="icon" class="w-3/12 aspect-square flex justify-center items-center  bg-slate-200/70 rounded-full cursor-pointer">
                         <Unicon :name="icon" fill="#64748b" hover-fill="#fff" width="32" height="32" />
@@ -100,7 +142,14 @@
             </div>
 
             <!-- Lets work together part -->
-            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl">
+            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, scale: 0 }"
+            :enter="{ opacity: 1, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-5/12 grid grid-cols-2 gap-4">
                 </div>
 
@@ -120,7 +169,14 @@
             </div>
 
             <!-- Credential Part -->
-            <div class="p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl">
+            <div class="p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -500 }"
+            :enter="{ opacity: 1, x: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="150"
+            :duration="1000">
                 <div class="basis-8/12 overflow-hidden flex items-center justify-center">
                     <img src="../assets/images/Aj Logo.svg" class="w-full h-20 mx-auto"/>
                 </div>
