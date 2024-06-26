@@ -132,10 +132,10 @@
                     :duration="1000">
                         <div class="text-start text-text text-lg">{{ skill.title }}</div>
                         <template class="w-full grid grid-cols-12 gap-6 p-5">
-                            <div v-for="item in skill.skill" :key="item.name" class="w-full flex flex-col items-start gap-2 col-span-6">
-                                <div class="text-xl text-text">{{ item.name }}</div>
+                            <div v-for="(item, idx) in skill.skill" :key="idx" class="w-full flex flex-col items-start gap-2 col-span-6">
+                                <div class="text-xl text-text">{{ item?.name }}</div>
                                 <div class="w-full bg-slate-100/10 rounded-full dark:bg-gray-700">
-                                    <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item.value}`}"> {{ item.value }}</div>
+                                    <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item?.value}`}"> {{ item?.value }}</div>
                                 </div>
                             </div>
                         </template>
@@ -209,7 +209,7 @@ const skillDetails = ref([
     { // this empty value used to cover above all value enter inside view range
         title: '',
         skill : [
-            {},
+            {name: '' , value: ''},,
         ]
     },
 

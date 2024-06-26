@@ -26,8 +26,8 @@
         <section class="mt-28">
             <div class="w-8/12 h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 p-10 to-slate-500/10 mx-auto flex flex-col gap-4 rounded-tl-3xl rounded-br-3xl"
             v-motion
-            :initial="{ opacity: 0, Y: -500, scale: 0}"
-            :enter="{ opacity: 1, Y: 0, scale: 1 }"
+            :initial="{ opacity: 0, y: -500, scale: 0}"
+            :enter="{ opacity: 1, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
             :hovered="{ }"
             :delay="100"
