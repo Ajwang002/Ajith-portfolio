@@ -2,7 +2,12 @@
     <div class="w-full h-full px-7 py-12 grid grid-cols-12 gap-4">
 
         <!-- Left Section -->
-        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl">
+        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+        v-motion
+        :initial="{ opacity: 0, x: 500, scale: 0}"
+        :enter="{ opacity: 1, x: 0, scale: 1 }"
+        :delay="10"
+        :duration="1000">
             <div class="w-full h-fit">
                 <img src="../assets/images/Aj Logo.png" class="h-48 w-48 mx-auto"/>
             </div>
@@ -25,10 +30,22 @@
 
 
         <!-- Right Section -->
-        <section class="about-section col-span-8 w-full flex flex-col gap-4">
+        <section class="about-section col-span-8 w-full flex flex-col gap-4"
+        v-motion
+        :initial="{ opacity: 0, x: -500, scale: 0}"
+        :enter="{ opacity: 1, x: 0, scale: 1 }"
+        :variants="{ custom: { scale: 2 } }"
+        :hovered="{ }"
+        :delay="10"
+        :duration="1000">
 
             <!-- About Me Section -->
-            <div class="w-full h-fit p-5 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl flex flex-col gap-4">
+            <div class="w-full h-fit p-5 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl flex flex-col gap-4"
+            v-motion
+            :initial="{ opacity: 0, y: 100, scale: 0}"
+            :visible-once="{ opacity: 1, y: 0, scale: 1 }"
+            :delay="10"
+            :duration="1000">
                 <div class="text-2xl text-text text-start">ABOUT ME</div>
                 <div class="text-justify">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
@@ -38,7 +55,12 @@
             <!-- Experience Section -->
             <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">EXPERIENCE</div>
-                <div v-for="(experience, idx) in experienceDetails" :key="experience.role" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' ">
+                <div v-for="(experience, idx) in experienceDetails" :key="experience.role" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
+                v-motion
+                :initial="{ opacity: 0, y: 100, scale: 0}"
+                :visible-once="{ opacity: 1, y: 0, scale: 1 }"
+                :delay="10"
+                :duration="1000">
                     <div class="flex items-center gap-4">
                         <div class="flex items-center gap-3 text-slate-100/50">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
@@ -67,7 +89,12 @@
             <!-- Education Section -->
             <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">EDUCATION</div>
-                <div v-for="(education, idx) in educationDetails" :key="education.degree" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' ">
+                <div v-for="(education, idx) in educationDetails" :key="education.degree" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
+                v-motion
+                :initial="{ opacity: 0, y: 100, scale: 0}"
+                :visible-once="{ opacity: 1, y: 0, scale: 1 }"
+                :delay="10"
+                :duration="1000">
                     <div class="w-full flex items-center gap-4">
                         <div class="flex items-center gap-3 text-slate-100/50">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
@@ -97,9 +124,12 @@
             <!-- Skill Section -->
             <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">SKILL</div>
-                <!-- :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' " -->
-                
-                    <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col">
+                    <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col"
+                    v-motion
+                    :initial="{ opacity: 0, y: 100, scale: 0}"
+                    :visible-once="{ opacity: 1, y: 0, scale: 1 }"
+                    :delay="1"
+                    :duration="1000">
                         <div class="text-start text-text text-lg">{{ skill.title }}</div>
                         <template class="w-full grid grid-cols-12 gap-6 p-5">
                             <div v-for="item in skill.skill" :key="item.name" class="w-full flex flex-col items-start gap-2 col-span-6">
@@ -174,6 +204,12 @@ const skillDetails = ref([
         skill : [
             {name: 'Tailwind css' , value: '95%'},
             {name: 'Type Script' , value: '85%'},
+        ]
+    },
+    { // this empty value used to cover above all value enter inside view range
+        title: '',
+        skill : [
+            {},
         ]
     },
 

@@ -3,7 +3,14 @@
 
         <!-- Contact info section -->
         <section class="grid grid-cols-6 gap-4">
-            <div v-for="(contact, idx) in contactInfo" :key="idx" class="w-full flex flex-col gap-2 items-center" :class="idx=== 2 ? 'col-span-2' : ''">
+            <div v-for="(contact, idx) in contactInfo" :key="idx" class="w-full flex flex-col gap-2 items-center" :class="idx=== 2 ? 'col-span-2' : ''"
+            v-motion
+            :initial="{ opacity: 0, scale: 0}"
+            :enter="{ opacity: 1, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="100"
+            :duration="1000">
                 <div v-if="contact.icon" class="w-20 h-20 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex items-center justify-center rounded-md">
                     <Unicon :name="contact.icon" fill="#fff" width="32" height="32"/>
                 </div>
@@ -17,7 +24,14 @@
 
         <!-- Contact form section-->
         <section class="mt-28">
-            <div class="w-8/12 h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 p-10 to-slate-500/10 mx-auto flex flex-col gap-4 rounded-tl-3xl rounded-br-3xl">
+            <div class="w-8/12 h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 p-10 to-slate-500/10 mx-auto flex flex-col gap-4 rounded-tl-3xl rounded-br-3xl"
+            v-motion
+            :initial="{ opacity: 0, Y: -500, scale: 0}"
+            :enter="{ opacity: 1, Y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="100"
+            :duration="1000">
                 <div class="text-5xl text-start">Let's work <span class="text-green-500">together</span></div>
                 <form action="#" class="space-y-8">
                     <div class="text-slate-100/50">
