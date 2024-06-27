@@ -3,7 +3,14 @@
 
         <!-- Profile & summary section -->
         <section class="grid grid-cols-3 gap-4 h-fit items-center">
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-6 h-full rounded-2xl">
+            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-6 h-full rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500}"
+            :enter="{ opacity: 1, x: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="50"
+            :duration="1200">
                 <!-- <img src="../assets/images/Aj Logo.png" class="h-44 w-44"/> -->
                 <div v-for="(service, idx) in services" :key="service.name">
                     <div class="flex items-center justify-start gap-4 cursor-pointer group" @click="onSelectService(idx)">
@@ -16,8 +23,23 @@
             </div>
 
             <div class="col-span-2 flex flex-col gap-4 h-full">
-                <div class="text-5xl text-text text-center">ALL PROJECTS</div>
-                <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-4 items-start rounded-2xl">
+                <div class="text-5xl text-text text-center"
+                v-motion
+                :initial="{ opacity: 0, scale:0}"
+                :enter="{ opacity: 1,scale: 1 }"
+                :variants="{ custom: { scale: 2 } }"
+                :hovered="{ }"
+                :delay="50"
+                :duration="1200">ALL PROJECTS</div>
+
+                <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-4 items-start rounded-2xl"
+                v-motion
+                :initial="{ opacity: 0, x: -500}"
+                :enter="{ opacity: 1, x: 0, scale: 1 }"
+                :variants="{ custom: { scale: 2 } }"
+                :hovered="{ }"
+                :delay="50"
+                :duration="1200">
                     <div class="text-4xl">{{ selectedService?.splitName[0] }} <span v-if="selectedService?.splitName[1]" class="text-green-500">{{ selectedService?.splitName[1] }}</span></div>
                     <div class="text-justify text-slate-100/50">{{ selectedService?.content }}</div>
                     <div class="flex items-center gap-4 text-text text-sm">
@@ -32,7 +54,14 @@
         <!-- Bottom section -->
         <section class="grid grid-cols-4 gap-4 h-[250px]">
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl">
+            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: 500, y: 500 }"
+            :enter="{ opacity: 1, x: 0, y: 0,  scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="50"
+            :duration="1200">
                 <div class="basis-9/12 w-full overflow-hidden flex justify-between items-center">
                     <div v-for="icon in ['instagram', 'linkedin', 'twitter']" :key="icon" class="w-3/12 aspect-square flex justify-center items-center  bg-slate-100/10  rounded-full cursor-pointer">
                         <Unicon :name="icon" fill="#A1A1AA" hover-fill="#fff" width="32" height="32" />
@@ -55,7 +84,14 @@
             </div>
 
             <!-- Lets work together part -->
-            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl">
+            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, scale: 0 }"
+            :enter="{ opacity: 1, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="50"
+            :duration="1200">
                 <div class="basis-5/12 grid grid-cols-2 gap-4">
                 </div>
 
@@ -75,7 +111,14 @@
             </div>
 
             <!-- Credential Part -->
-            <div class="p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl">
+            <div class="p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+            v-motion
+            :initial="{ opacity: 0, x: -500, y:500 }"
+            :enter="{ opacity: 1, x: 0, y:0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }"
+            :hovered="{ }"
+            :delay="50"
+            :duration="1200">
                 <div class="basis-8/12 overflow-hidden flex items-center justify-center">
                     <img src="../assets/images/Aj Logo.svg" class="w-full h-20 mx-auto"/>
                 </div>
@@ -118,7 +161,6 @@ interface service {
 }
 
 type ServiceWithIndex = service & { index: number | undefined };
-
 
 const services = ref<service[]>([
     {
