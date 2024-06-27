@@ -8,10 +8,9 @@
             :initial="{ opacity: 0, scale: 0}"
             :enter="{ opacity: 1, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
-                <div v-if="contact.icon" class="w-20 h-20 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex items-center justify-center rounded-md">
+                <div v-if="contact.icon" class="w-20 h-20 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 flex items-center justify-center rounded-md">
                     <Unicon :name="contact.icon" fill="#fff" width="32" height="32"/>
                 </div>
                 <div class="text-2xl">{{ contact.title }}</div>
@@ -24,12 +23,11 @@
 
         <!-- Contact form section-->
         <section class="mt-28">
-            <div class="w-8/12 h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 p-10 to-slate-500/10 mx-auto flex flex-col gap-4 rounded-tl-3xl rounded-br-3xl"
+            <div class="w-8/12 h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 mx-auto flex flex-col gap-4 rounded-tl-3xl rounded-br-3xl p-10"
             v-motion
             :initial="{ opacity: 0, y: -500, scale: 0}"
             :enter="{ opacity: 1, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="text-5xl text-start">Let's work <span class="text-green-500">together</span></div>
@@ -50,7 +48,7 @@
                         <label for="message" class="block mb-2 text-sm font-medium  text-start">Message</label>
                         <textarea v-model="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your message here ..."></textarea>
                     </div>
-                    <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-br from bg-green-400 via-green-500 to-green-600 border-none">Send message</button>
+                    <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-br from bg-emerald-500 via-emerald-600 to-emerald-700 border-none">Send message</button>
                 </form>
             </div>
         </section>
