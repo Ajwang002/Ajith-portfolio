@@ -15,13 +15,17 @@
     "flowbite": "^2.3.0",
     "vue": "^3.2.47",
     "vue-router": "^4.3.0",
-    "vue-unicons": "^3.3.1"
+    "vue-unicons": "^3.3.1",
+    "vue3-typer": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
     "@vitejs/plugin-vue": "^4.1.0",
     "autoprefixer": "^10.4.17",
+    "node-sass": "^9.0.0",
     "postcss": "^8.4.35",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",

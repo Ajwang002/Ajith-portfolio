@@ -17,7 +17,25 @@
                     <img src="../assets/images/Aj Logo.png" class="h-44"/>
                 </div>
                 <div class="basis-1/2 flex flex-col justify-center items-start">
-                    <div class="text-slate-100/50 text-xl font-medium mb-3">A WEB DEVELOPER</div>
+                    <div class="text-slate-100/50 text-xl font-bold mb-3">
+                        <span>A WEB</span>
+                        <span class="ml-1">
+                            <vue-typer
+                            class="custom"
+                            :text='["DEVELOPER", "DESIGNER"]'
+                            :repeat='Infinity'
+                            :shuffle='false'
+                            initial-action='typing'
+                            :pre-type-delay='50'
+                            :type-delay='150'
+                            :pre-erase-delay='2000'
+                            :erase-delay='250'
+                            erase-style='backspace'
+                            :erase-on-complete='false'
+                            caret-animation='blink'
+                            ></vue-typer>
+                        </span>
+                    </div>
                     <div class="flex flex-col justify-center items-start text-slate-100">
                         <span class="text-5xl">Ajithkumar</span>
                         <span class="text-4xl">Venkatrman</span>
@@ -248,6 +266,9 @@
 import { ref } from 'vue';
 import { ArrowDownTrayIcon  } from '@heroicons/vue/24/solid'
 import {useNavigation} from '@/composables/CommonFunctions'
+// @ts-ignore
+import VueTyper from 'vue3-typer'
+import "vue3-typer/dist/vue-typer.css"
 
 
 // ------------- Working Variable's ------------- //
@@ -264,3 +285,27 @@ const experienceDetails = ref([
 ])
 
 </script>
+
+<style lang="scss" scoped>
+.vue-typer {
+    --char-typed-color: green;
+    --char-selected-color: black;
+
+    --char-typed-background-color: transparent;
+    --char-selected-background-color: #ACCEF7;
+
+    --caret-idle-color: red;
+    --caret-typing-color: green;
+    --caret-selecting-color: black;
+    --caret-erasing-color: red;
+    --caret-complete-color: black;
+
+    cursor: default;
+    user-select: none;
+}
+.vue-typer {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight:bold;
+}
+
+</style>
