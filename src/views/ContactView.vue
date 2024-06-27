@@ -9,8 +9,8 @@
             :enter="{ opacity: 1, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
             :hovered="{ }"
-            :delay="100"
-            :duration="1000">
+            :delay="50"
+            :duration="1200">
                 <div v-if="contact.icon" class="w-20 h-20 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex items-center justify-center rounded-md">
                     <Unicon :name="contact.icon" fill="#fff" width="32" height="32"/>
                 </div>
@@ -30,8 +30,8 @@
             :enter="{ opacity: 1, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
             :hovered="{ }"
-            :delay="100"
-            :duration="1000">
+            :delay="50"
+            :duration="1200">
                 <div class="text-5xl text-start">Let's work <span class="text-green-500">together</span></div>
                 <form action="#" class="space-y-8">
                     <div class="text-slate-100/50">

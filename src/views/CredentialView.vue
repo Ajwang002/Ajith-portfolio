@@ -7,7 +7,7 @@
         :initial="{ opacity: 0, x: 500, scale: 0}"
         :enter="{ opacity: 1, x: 0, scale: 1 }"
         :delay="10"
-        :duration="1000">
+        :duration="1200">
             <div class="w-full h-fit">
                 <img src="../assets/images/Aj Logo.png" class="h-48 w-48 mx-auto"/>
             </div>
@@ -37,7 +37,7 @@
         :variants="{ custom: { scale: 2 } }"
         :hovered="{ }"
         :delay="10"
-        :duration="1000">
+        :duration="1200">
 
             <!-- About Me Section -->
             <div class="w-full h-fit p-5 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl flex flex-col gap-4"
@@ -45,7 +45,7 @@
             :initial="{ opacity: 0, y: 100, scale: 0}"
             :visible-once="{ opacity: 1, y: 0, scale: 1 }"
             :delay="10"
-            :duration="1000">
+            :duration="1200">
                 <div class="text-2xl text-text text-start">ABOUT ME</div>
                 <div class="text-justify">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
@@ -60,7 +60,7 @@
                 :initial="{ opacity: 0, y: 100, scale: 0}"
                 :visible-once="{ opacity: 1, y: 0, scale: 1 }"
                 :delay="10"
-                :duration="1000">
+                :duration="1200">
                     <div class="flex items-center gap-4">
                         <div class="flex items-center gap-3 text-slate-100/50">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
@@ -94,7 +94,7 @@
                 :initial="{ opacity: 0, y: 100, scale: 0}"
                 :visible-once="{ opacity: 1, y: 0, scale: 1 }"
                 :delay="10"
-                :duration="1000">
+                :duration="1200">
                     <div class="w-full flex items-center gap-4">
                         <div class="flex items-center gap-3 text-slate-100/50">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
@@ -129,7 +129,7 @@
                     :initial="{ opacity: 0, y: 100, scale: 0}"
                     :visible-once="{ opacity: 1, y: 0, scale: 1 }"
                     :delay="1"
-                    :duration="1000">
+                    :duration="1200">
                         <div class="text-start text-text text-lg">{{ skill.title }}</div>
                         <template class="w-full grid grid-cols-12 gap-6 p-5">
                             <div v-for="(item, idx) in skill.skill" :key="idx" class="w-full flex flex-col items-start gap-2 col-span-6">
@@ -209,7 +209,7 @@ const skillDetails = ref([
     { // this empty value used to cover above all value enter inside view range
         title: '',
         skill : [
-            {name: '' , value: ''},,
+            {name: '' , value: '0'},,
         ]
     },
 
