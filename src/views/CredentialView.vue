@@ -2,7 +2,7 @@
     <div class="w-full h-full px-7 py-12 grid grid-cols-12 gap-4">
 
         <!-- Left Section -->
-        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 rounded-2xl"
         v-motion
         :initial="{ opacity: 0, x: 500, scale: 0}"
         :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -35,12 +35,11 @@
         :initial="{ opacity: 0, x: -500, scale: 0}"
         :enter="{ opacity: 1, x: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
-        :hovered="{ }"
         :delay="10"
         :duration="1200">
 
             <!-- About Me Section -->
-            <div class="w-full h-fit p-5 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl flex flex-col gap-4"
+            <div class="w-full h-fit p-5 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 rounded-2xl flex flex-col gap-4"
             v-motion
             :initial="{ opacity: 0, y: 100, scale: 0}"
             :visible-once="{ opacity: 1, y: 0, scale: 1 }"
@@ -53,7 +52,7 @@
             </div>
 
             <!-- Experience Section -->
-            <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
+            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">EXPERIENCE</div>
                 <div v-for="(experience, idx) in experienceDetails" :key="experience.role" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
@@ -87,7 +86,7 @@
             </div>
 
             <!-- Education Section -->
-            <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
+            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">EDUCATION</div>
                 <div v-for="(education, idx) in educationDetails" :key="education.degree" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
@@ -122,7 +121,7 @@
 
 
             <!-- Skill Section -->
-            <div class="w-full h-fit backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-5 flex flex-col gap-3 items-start rounded-2xl">
+            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
                 <div class="text-2xl">SKILL</div>
                     <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col"
                     v-motion

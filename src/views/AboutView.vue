@@ -3,12 +3,11 @@
 
         <!-- Profile & summary section -->
         <section class="grid grid-cols-3 gap-4 h-[250px] items-center">
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex justify-center rounded-2xl"
+            <div class="backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-7 h-full flex justify-center rounded-2xl"
             v-motion
             :initial="{ opacity: 0, y: 500 }"
             :enter="{ opacity: 1, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <img src="../assets/images/Aj Logo.png" class="h-44 w-44"/>
@@ -20,15 +19,14 @@
                 :initial="{ opacity: 0, x: 500 }"
                 :enter="{ opacity: 1, x: 0, scale: 1 }"
                 :variants="{ custom: { scale: 2 } }"
-                :hovered="{ }"
                 :delay="50"
                 :duration="1200">SELF-SUMMARY</div>
-                <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 flex flex-col gap-4 items-start rounded-2xl"
+                <div class="backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-7 flex flex-col gap-4 items-start rounded-2xl"
                 v-motion
                 :initial="{ opacity: 0, y: -500 }"
                 :enter="{ opacity: 1, y: 0, scale: 1 }"
                 :variants="{ custom: { scale: 2 } }"
-                :hovered="{ }"
+
                 :delay="50"
                 :duration="1200">
                     <div class="text-4xl">Ajithkumar <span class="text-green-500">Venkatraman</span></div>
@@ -42,12 +40,11 @@
         <section class="grid grid-cols-2 gap-4 h-[250px] items-center">
 
             <!-- Experience Part -->
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
+            <div class="backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: -500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="text-2xl">EXPERIENCE</div>
@@ -76,12 +73,11 @@
 
 
             <!-- Educational Part -->
-            <div class="backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
+            <div class="backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-7 h-full flex flex-col gap-3 items-start rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: 500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="text-2xl">EDUCATION</div>
@@ -112,12 +108,11 @@
         <!-- Bottom section -->
         <section class="grid grid-cols-4 gap-4 h-[250px]">
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-5 rounded-2xl"
+            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 flex flex-col gap-5 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: 500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="basis-9/12 w-full overflow-hidden flex justify-between items-center">
@@ -142,12 +137,11 @@
             </div>
 
             <!-- Lets work together part -->
-            <div class="col-span-2 p-7 backdrop-blur-xl bg-gradient-to-br from-slate-500/20 to-slate-500/10 flex flex-col gap-4 rounded-2xl"
+            <div class="col-span-2 p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 flex flex-col gap-4 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, scale: 0 }"
             :enter="{ opacity: 1, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="basis-5/12 grid grid-cols-2 gap-4">
@@ -169,12 +163,11 @@
             </div>
 
             <!-- Credential Part -->
-            <div class="p-5 flex flex-col backdrop-blur-sm bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-2xl"
+            <div class="p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: -500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
-            :hovered="{ }"
             :delay="50"
             :duration="1200">
                 <div class="basis-8/12 overflow-hidden flex items-center justify-center">

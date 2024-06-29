@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full h-fit">
+    <div class="w-full h-fit ">
         <component :is="page" class="w-full h-fit"/>
-        <FooterView class="w-full h-fit"/>
+        <!-- <FooterView class="w-full h-fit"/> -->
     </div>
 </template>
 <script setup lang="ts">
@@ -14,7 +14,7 @@ import About from './AboutView.vue'
 import Credential from './CredentialView.vue'
 import Service from './ServiceView.vue'
 import Work from './WorkView.vue'
-import FooterView from './FooterView.vue'
+// import FooterView from './FooterView.vue'
 
 
 // ---------- Helping Constant ---------- //
