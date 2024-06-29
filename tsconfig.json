@@ -28,6 +28,6 @@
       ],
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/vue-unicons.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/vue-unicons.d.ts","vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
