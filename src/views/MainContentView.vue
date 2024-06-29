@@ -5,7 +5,12 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- Profile Column -->
-            <div class="p-7 pb-9 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 flex flex-row gap-5 rounded-2xl "
+            <div class="p-7 pb-9 backdrop-blur-3xl bg-gradient-to-br from-blue-600/80 via-purple-800/80 to-fuchsia-800/80  border-2 border-purple-500/20 hover:border-purple-500/80  flex flex-row gap-5 rounded-2xl "
+            ref="targetEl"
+            :style="{
+                 transform: cardTransform,
+                 transition: 'transform 0.2s ease-out'
+            }"
             v-motion
             :initial="{ opacity: 0, y: 500 }"
             :enter="{ opacity: 1, y: 0, scale: 1 }"
@@ -15,7 +20,7 @@
                     <img src="../assets/images/Aj Logo.png" class="h-44 mx-auto"/>
                 </div>
                 <div class="basis-1/2 flex flex-col justify-center items-start">
-                    <div class="text-slate-100/50 text-xl font-bold mb-3">
+                    <div class="text-slate-100/70 text-xl font-bold mb-3">
                         <span>A WEB</span>
                         <span class="ml-1">
                             <vue-typer
@@ -45,7 +50,7 @@
             </div>
 
             <div class="flex flex-col gap-4">
-                <div class="basis-2/12 p-2 px-5 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 text-slate-100/50 rounded-2xl overflow-y-hidden"
+                <div class="basis-2/12 p-2 px-5 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30   border-2 border-indigo-500/30 text-slate-100/50 rounded-2xl overflow-y-hidden"
                 v-motion
                 :initial="{ opacity: 0, y: -500 }"
                 :enter="{ opacity: 1, y: 0, scale: 1 }"
@@ -58,7 +63,7 @@
                 </div>
 
                 <div class="basis-10/12 flex gap-4">
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 rounded-2xl"
+                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30  border-2 border-indigo-500/30 rounded-2xl"
                     v-motion
                     :initial="{ opacity: 0, x: 500 }"
                     :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -84,7 +89,7 @@
                         </div>
                     </div>
 
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 rounded-2xl"
+                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 rounded-2xl"
                     v-motion
                     :initial="{ opacity: 0, x: -500 }"
                     :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -117,7 +122,7 @@
         <section class="grid grid-cols-4 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: 500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -144,7 +149,7 @@
             </div>
 
             <!-- Service Providing Section -->
-            <div class="col-span-2 p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="col-span-2 p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, scale: 0 }"
             :enter="{ opacity: 1, scale: 1 }"
@@ -154,7 +159,7 @@
                 <div class="basis-9/12 grid grid-cols-2 gap-4">
                     <div v-for="(service, idx) in serviceDetails" :key="idx" class="service-img group rounded-2xl cursor-pointer">
                         <span class="service-text opacity-0 group-hover:opacity-100 text-xl font-medium text-text">{{ service.name }}</span>
-                        <img :src="service.image" class="w-auto h-[126px] object-contain mx-auto opacity-100 group-hover:opacity-20"/>
+                        <img :src="service.image" class="w-auto h-[126px] object-contain mx-auto opacity-100 group-hover:opacity-10"/>
                     </div>
                 </div>
 
@@ -175,7 +180,7 @@
 
 
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: -500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -208,7 +213,7 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 w-full flex justify-between gap-2 rounded-2xl"
+            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 w-full flex justify-between gap-2 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: -500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
@@ -222,7 +227,7 @@
             </div>
 
             <!-- Service Providing Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 border-2 border-indigo-500/30 flex flex-col gap-4 rounded-2xl"
+            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-4 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: 500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
@@ -251,14 +256,20 @@
 </template>
 <script setup lang="ts">
 // ------------- imports ------------- //
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { ArrowDownTrayIcon  } from '@heroicons/vue/24/solid'
 import {useNavigation} from '@/composables/CommonFunctions'
 import WebDesign from '../assets/images/webDesign.png'
 import WebDev from '../assets/images/webDevelopemnt.png'
+import {useMouseInElement} from '@vueuse/core'
 // @ts-ignore
 import VueTyper from 'vue3-typer'
 import "vue3-typer/dist/vue-typer.css"
+
+
+// ------------- Helping Constant ------------- //
+const targetEl = ref(null)
+const {elementHeight, elementWidth, isOutside, elementX, elementY} = useMouseInElement(targetEl)
 
 
 // ------------- Working Variable's ------------- //
@@ -279,11 +290,21 @@ const serviceDetails = ref([
     {name: 'Web Developing', image: WebDev}
 ])
 
+// ------------- Working function ------------- //
+const cardTransform = computed(() =>{
+    var maxRotation = 15
+
+    var rX = ( maxRotation/2 - (elementY.value / elementHeight.value) * maxRotation).toFixed(2)
+    var rY = ((elementX.value / elementWidth.value) * maxRotation - maxRotation/2).toFixed(2)
+
+    return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+})
+
 </script>
 
 <style lang="scss" scoped>
 .vue-typer {
-    --char-typed-color: #22c55e;
+    --char-typed-color: rgb(11, 247, 11);
     --char-selected-color: black;
 
     --char-typed-background-color: transparent;
@@ -308,8 +329,8 @@ const serviceDetails = ref([
     background-color: none !important;
 }
 .service-img:hover{
-    background-color: rgba(16, 127, 201, 0.216) !important;
-    transition: background-color 1s linear;
+    background-color: rgba(16, 127, 201, 0.416) !important;
+    transition: background-color 0.5s linear;
 }
 .service-text{
     position: absolute;
