@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import ComponentRegisterPlugins from '@/plugins/ComponentRegisterPlugins'
+import ComponentRegisterPlugins from './plugins/ComponentRegisterPlugins'
 import IconPlugin from './plugins/IconPlugin'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'
