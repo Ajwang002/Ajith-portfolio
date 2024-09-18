@@ -16,15 +16,22 @@ module.exports = {
     },
     extend: {
       colors:{
-        primary:'#219ca7',
-        secondary:'#b5e056',
+        primary:'#67fa05',
+        secondary:'#D3D3D3',
         error:'#F05252',
         success:'#0E9F6E',
         warning:'#FF5A1F',
         info:'#3F83F8',
+        important:'#0bf70b',
+        invite:'#00FF85',
         background:'var(--background)',
         surface:'var(--surface)',
         text:'var(--text)',
+        secText:'var(--sec-text)',
+        btnText:'var(--btn-text)'
+      },
+      animation:{
+        'back_anime': 'back_anime 10s linear infinite',
       }
     },
   },
@@ -33,19 +40,23 @@ module.exports = {
     plugin(({ addBase }) =>  {
       addBase({
       html: {
-        '--background':'#0e1111',
+        '--background':'#F7F7FF',
         '--surface':'#232b2b',
         '--text':'#f4f6f5',
+        '--sec-text':'#D3D3D3',
+        '--btn-text':'#B0C4DE'
       },
       '.dark' : {
         '--background':'#1A2130',
         '--surface':'#161817',
-        '--text':'#219ca7',
+        '--text':'#FFFFFF',
+        '--sec-text':'#D3D3D3',
+        '--btn-text':'#B0C4DE'
       }
     }),
 
       // Flowbite plugin register
       require('flowbite/plugin')
     }),
-  ]
+  ],
 }

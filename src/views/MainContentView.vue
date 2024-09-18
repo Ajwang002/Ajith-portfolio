@@ -5,7 +5,7 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- Profile Column -->
-            <div class="p-7 pb-9 backdrop-blur-3xl bg-gradient-to-br from-blue-600/80 via-purple-800/80 to-fuchsia-800/80  border-2 border-purple-500/20 hover:border-purple-500/80  flex flex-row gap-5 rounded-2xl "
+            <div class="p-7 pb-9  bg-indigo-800/10 backdrop-blur-md border-2 border-indigo-700 hover:border-indigo-600/90  flex flex-row gap-5 rounded-2xl shadow-xl shadow-violet-900/30 drop-shadow-lg "
             ref="targetEl"
             :style="{
                  transform: cardTransform,
@@ -20,7 +20,7 @@
                     <img src="../assets/images/Aj Logo.png" class="h-44 mx-auto"/>
                 </div>
                 <div class="basis-1/2 flex flex-col justify-center items-start">
-                    <div class="text-slate-100/70 text-xl font-bold mb-3">
+                    <div class="text-secText text-xl font-bold mb-3">
                         <span>A WEB</span>
                         <span class="ml-1">
                             <vue-typer
@@ -39,31 +39,32 @@
                             ></vue-typer>
                         </span>
                     </div>
-                    <div class="flex flex-col justify-center items-start text-slate-100">
+                    <div class="flex flex-col justify-center items-start text-text">
                         <span class="text-5xl">Ajithkumar</span>
                         <span class="text-4xl">Venkatrman</span>
                     </div>
-                    <div class="mt-3 text-slate-100/50">
+                    <div class="mt-3 text-secText">
                         Iam a Web Developer & Designer based on India.
                     </div>
                 </div>
             </div>
 
             <div class="flex flex-col gap-4">
-                <div class="basis-2/12 p-2 px-5 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30   border-2 border-indigo-500/30 text-slate-100/50 rounded-2xl overflow-y-hidden"
+                <!-- bg-blue-100/10 backdrop-blur-md  -->
+                <div class="basis-2/12 p-2 px-5 backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 text-secText rounded-2xl overflow-y-hidden"
                 v-motion
                 :initial="{ opacity: 0, y: -500 }"
                 :enter="{ opacity: 1, y: 0, scale: 1 }"
                 :variants="{ custom: { scale: 2 } }"
                 :delay="50"
                 :duration="1200">
-                    <div class="h-full overflow-y-hidden uppercase flex items-center">
+                    <div class="h-full overflow-y-hidden uppercase flex items-center text-text font-semibold leading-10">
                         <marquee>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cumque ducimus dicta temporibus atque, sit nulla cum quas perferendis ut reiciendis voluptates, ex ad, accusamus expedita? Eaque suscipit aliquid pariatur!</marquee>
                     </div>
                 </div>
 
-                <div class="basis-10/12 flex gap-4">
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30  border-2 border-indigo-500/30 rounded-2xl"
+                <div class="basis-10/12 flex gap-4 ">
+                    <div class="basis-1/2 p-5 flex flex-col bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600"
                     v-motion
                     :initial="{ opacity: 0, x: 500 }"
                     :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -76,20 +77,20 @@
 
                         <div class="basis-4/12 flex justify-between items-center">
                             <div class="flex flex-col items-start">
-                                <div class="text-slate-100/50">
+                                <div class="text-secText">
                                     MORE ABOUT ME
                                 </div>
-                                <div class="text-slate-100 text-2xl font-bold">
+                                <div class="text-text text-2xl font-bold">
                                     Credentials
                                 </div>
                             </div>
-                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from-green-500/30 via-green-500/50 to-green-500/30 cursor-pointer px-5 animate-pulse hover:animate-none" @click="useNavigation('/credential')">
-                                <span class="font-medium">Lets go</span>
+                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5" @click="useNavigation('/credential')">
+                                <ArrowRightIcon class="text-text w-5 h-5"/>
                             </div>
                         </div>
                     </div>
 
-                    <div class="basis-1/2 p-5 flex flex-col backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 rounded-2xl"
+                    <div class="basis-1/2 p-5 flex flex-col  bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600"
                     v-motion
                     :initial="{ opacity: 0, x: -500 }"
                     :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -102,15 +103,15 @@
 
                         <div class="basis-4/12 flex justify-between items-center">
                             <div class="flex flex-col items-start">
-                                <div class="text-slate-100/50">
+                                <div class="text-secText">
                                     SHOW CASE
                                 </div>
-                                <div class="text-slate-100 text-2xl font-bold">
+                                <div class="text-text text-2xl font-bold">
                                     Portfolios
                                 </div>
                             </div>
-                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from-green-500/30 via-green-500/50 to-green-500/30  cursor-pointer px-5 animate-pulse hover:animate-none">
-                                <span class="font-medium">Lets go</span>
+                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
+                               <ArrowRightIcon class="text-text w-5 h-5"/>
                             </div>
                         </div>
                     </div>
@@ -122,7 +123,7 @@
         <section class="grid grid-cols-4 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="p-7 bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600"
             v-motion
             :initial="{ opacity: 0, x: 500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -135,21 +136,21 @@
 
                 <div class="basis-3/12 flex justify-between items-end">
                     <div class="flex flex-col items-start">
-                        <div class="text-slate-100/50">
+                        <div class="text-secText">
                             MY CV
                         </div>
-                        <div class="text-slate-100 text-2xl font-bold">
+                        <div class="text-text text-2xl font-bold">
                             Download
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from-green-500/30 via-green-500/50 to-green-500/30  cursor-pointer px-5 animate-pulse hover:animate-none">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
                         <ArrowDownTrayIcon class="text-text w-6 h-6"/>
                     </div>
                 </div>
             </div>
 
             <!-- Service Providing Section -->
-            <div class="col-span-2 p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="col-span-2 p-7  bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600flex flex-col gap-5"
             v-motion
             :initial="{ opacity: 0, scale: 0 }"
             :enter="{ opacity: 1, scale: 1 }"
@@ -165,22 +166,22 @@
 
                 <div class="basis-3/12 flex justify-between items-end">
                     <div class="flex flex-col items-start">
-                        <div class="text-slate-100/50">
+                        <div class="text-secText">
                             SPECIALIZATION
                         </div>
-                        <div class="text-slate-100 text-2xl font-bold">
+                        <div class="text-text text-2xl font-bold">
                             Services Offering
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from-green-500/30 via-green-500/50 to-green-500/30  cursor-pointer px-5 animate-pulse hover:animate-none">
-                        <span class="font-medium">Lets go</span>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
+                       <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
             </div>
 
 
             <!-- Social Media Profile Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-5 rounded-2xl"
+            <div class="p-7  bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600 flex flex-col gap-5"
             v-motion
             :initial="{ opacity: 0, x: -500 }"
             :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -189,21 +190,21 @@
             :duration="1200">
                 <div class="basis-9/12 w-full overflow-hidden flex justify-between items-center">
                     <div v-for="icon in ['instagram', 'linkedin', 'twitter']" :key="icon" class="w-3/12 aspect-square flex justify-center items-center  bg-slate-200/70 rounded-full cursor-pointer">
-                        <Unicon :name="icon" fill="#64748b" hover-fill="#fff" width="32" height="32" />
+                        <Unicon :name="icon" fill="#64748b" hover-fill="#0000FF" width="32" height="32" />
                     </div>
                 </div>
 
                 <div class="basis-3/12 flex justify-between items-end">
                     <div class="flex flex-col items-start">
-                        <div class="text-slate-100/50">
+                        <div class="text-secText">
                             STAY WITH ME
                         </div>
-                        <div class="text-slate-100 text-2xl font-bold">
+                        <div class="text-text text-2xl font-bold">
                             Profiles
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from-green-500/30 via-green-500/50 to-green-500/30  cursor-pointer px-5 animate-pulse hover:animate-none">
-                        <span class="font-medium">Lets go</span>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5">
+                       <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
             </div>
@@ -213,21 +214,21 @@
         <section class="grid grid-cols-2 gap-4 h-[250px]">
 
             <!-- CV Download Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 w-full flex justify-between gap-2 rounded-2xl"
+            <div class="p-7 border-2 border-indigo-500/50 w-full flex justify-between gap-2 rounded-2xl"
             v-motion
             :initial="{ opacity: 0, x: -500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
             :variants="{ custom: { scale: 2 } }"
             :delay="50"
             :duration="1200">
-                <div v-for="data in experienceDetails" :key="data.value" class="w-4/12 h-full p-7 rounded-2xl bg-gradient-to-br from-slate-600/20 to-slate-600/10  flex flex-col gap-2 justify-center items-center">
+                <div v-for="data in experienceDetails" :key="data.value" class="w-4/12 h-full p-7  bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600  flex flex-col gap-2 justify-center items-center">
                     <span class="text-5xl text-text">{{ data.value }}</span>
-                    <span class="text-slate-100/50">{{ data.title }}</span>
+                    <span class="text-secText">{{ data.title }}</span>
                 </div>
             </div>
 
             <!-- Service Providing Section -->
-            <div class="p-7 backdrop-blur-3xl bg-gradient-to-br from-blue-800/30 via-indigo-800/20 to-violet-800/30 border-2 border-indigo-500/30 flex flex-col gap-4 rounded-2xl"
+            <div class="p-7  bg-blue-900/30 backdrop-blur-md border-2 border-indigo-700/30 rounded-2xl shadow-sm shadow-indigo-600 flex flex-col gap-4"
             v-motion
             :initial="{ opacity: 0, x: 500, y:-500 }"
             :enter="{ opacity: 1, x: 0, y: 0, scale: 1 }"
@@ -243,11 +244,11 @@
                             Let's
                         </div>
                         <div class="text-text text-5xl font-bold">
-                            Work <span class="text-green-500">together.</span>
+                            Work <span class="text-important">together.</span>
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-gradient-to-br from bg-emerald-500/50 via-emerald-600/50 to-emerald-700/50 cursor-pointer px-5 animate-pulse hover:animate-none">
-                        <span class="font-medium">Lets go</span>
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5 " @click="useNavigation('/contacts')">
+                       <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
             </div>
@@ -257,7 +258,7 @@
 <script setup lang="ts">
 // ------------- imports ------------- //
 import { ref, computed } from 'vue';
-import { ArrowDownTrayIcon  } from '@heroicons/vue/24/solid'
+import { ArrowDownTrayIcon, ArrowRightIcon  } from '@heroicons/vue/24/solid'
 import {useNavigation} from '@/composables/CommonFunctions'
 import WebDesign from '../assets/images/webDesign.png'
 import WebDev from '../assets/images/webDevelopemnt.png'
@@ -304,7 +305,7 @@ const cardTransform = computed(() =>{
 
 <style lang="scss" scoped>
 .vue-typer {
-    --char-typed-color: rgb(11, 247, 11);
+    --char-typed-color: theme(colors.important);
     --char-selected-color: black;
 
     --char-typed-background-color: transparent;
@@ -338,5 +339,4 @@ const cardTransform = computed(() =>{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 </style>
