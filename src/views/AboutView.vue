@@ -29,7 +29,7 @@
 
                 :delay="50"
                 :duration="1200">
-                    <div class="text-4xl">Ajithkumar <span class="text-green-500">Venkatraman</span></div>
+                    <div class="text-4xl">Ajithkumar <span class="text-important">Venkatraman</span></div>
                     <div class="text-justify text-secText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, in voluptate cumque, magnam molestias quas similique aliquid officiis minima consequatur natus consequuntur architecto nihil? Quas alias nemo fuga id aliquam!
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                             Credentials
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 " @click="useNavigation('/credential')">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600  cursor-pointer px-5 " @click="useNavigation('/credential')">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             Profiles
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 " @click="null">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600  cursor-pointer px-5 " @click="null">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -181,10 +181,10 @@
                             Let's
                         </div>
                         <div class="text-text text-5xl font-bold">
-                            Work <span class="text-green-500">together.</span>
+                            Work <span class="text-important">together.</span>
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 " @click="useNavigation('/contacts')">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600  cursor-pointer px-5 " @click="useNavigation('/contacts')">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
