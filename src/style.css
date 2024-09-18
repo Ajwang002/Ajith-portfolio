@@ -5,7 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: rgb(0, 0, 0),;
+  /* background-image: linear-gradient(to right, rgb(21, 20, 20) , rgb(50, 50, 51)); */
+  /* background: #e5e5e8; */
   /* #1313144d */
 
   font-synthesis: none;
@@ -26,6 +27,7 @@ a:hover {
 
 /* body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -63,7 +65,7 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   height: auto;
   margin: 0 auto;
   padding: 0;
@@ -73,7 +75,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #1d1d5f;
   }
   a:hover {
     color: #747bff;
@@ -81,4 +83,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: rgba(21, 25, 38, 0.98);
+    /* #1A1A2E */
+    /* background-image: linear-gradient(to bottom right,rgb(48, 48, 60), rgba(20, 46, 107, 0.404) , rgb(48, 48, 60)); */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes back_anime {
+  0% {scale:0%; opacity:0%}
+  25% {scale:50%; opacity:50%}
+  50% {scale:100%; opacity:100%}
+  75% {scale:50%; opacity:50%}
+  100% {scale:0%; opacity:0%}
 }

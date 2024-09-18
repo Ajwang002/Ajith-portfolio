@@ -2,7 +2,7 @@
     <div class="w-full h-full px-7 py-12 grid grid-cols-12 gap-4">
 
         <!-- Left Section -->
-        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 rounded-2xl"
+        <section class="col-span-4 flex flex-col gap-8 h-fit p-7 bg-indigo-800/10 backdrop-blur-md border-2 border-indigo-700 hover:border-indigo-600/90 rounded-2xl"
         v-motion
         :initial="{ opacity: 0, x: 500, scale: 0}"
         :enter="{ opacity: 1, x: 0, scale: 1 }"
@@ -14,7 +14,7 @@
 
             <div class="flex flex-col gap-0 items-center">
                 <span class="text-text text-2xl">Ajithkumar <strong>Venkatraman</strong></span>
-                <span class="text-slate-100/50">@ajithkumar</span>
+                <span class="text-secText">@ajithkumar</span>
             </div>
 
             <div class="flex items-center justify-center gap-4">
@@ -39,21 +39,21 @@
         :duration="1200">
 
             <!-- About Me Section -->
-            <div class="w-full h-fit p-5 backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 rounded-2xl flex flex-col gap-4"
+            <div class="w-full h-fit p-5 backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 rounded-2xl flex flex-col gap-4"
             v-motion
             :initial="{ opacity: 0, y: 100, scale: 0}"
             :visible-once="{ opacity: 1, y: 0, scale: 1 }"
             :delay="10"
             :duration="1200">
-                <div class="text-2xl text-text text-start">ABOUT ME</div>
-                <div class="text-justify">
+                <div class="text-2xl text-green-500 text-start">ABOUT ME</div>
+                <div class="text-justify text-secText">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
                 </div>
             </div>
 
             <!-- Experience Section -->
-            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl">EXPERIENCE</div>
+            <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
+                <div class="text-2xl text-green-500">EXPERIENCE</div>
                 <div v-for="(experience, idx) in experienceDetails" :key="experience.role" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
                 :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -61,12 +61,12 @@
                 :delay="10"
                 :duration="1200">
                     <div class="flex items-center gap-4">
-                        <div class="flex items-center gap-3 text-slate-100/50">
+                        <div class="flex items-center gap-3 text-secText">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
                             <span>{{ experience.s_year }}</span>
                         </div>
                         <div>-</div>    
-                        <div class="flex items-center gap-3 text-slate-100/50">
+                        <div class="flex items-center gap-3 text-secText">
                             <Unicon name="calendar-slash" fill="#fff" width="21" height="21"/>
                             <span>{{ experience.e_year }}</span>
                         </div>
@@ -75,19 +75,19 @@
                         <Unicon name="suitcase-alt" fill="#fff" width="21" height="21"/>
                         <span>{{ experience.role }}</span>
                     </div>
-                    <div class="text-slate-100/50 flex items-center gap-3">
+                    <div class="text-secText flex items-center gap-3">
                         <Unicon name="building" fill="#fff" width="21" height="21"/>
                         <span>{{ experience.org }}</span>
                     </div>
-                    <div class="text-justify">
+                    <div class="text-justify text-secText">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
                     </div>
                 </div>
             </div>
 
             <!-- Education Section -->
-            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl">EDUCATION</div>
+            <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
+                <div class="text-2xl text-green-500">EDUCATION</div>
                 <div v-for="(education, idx) in educationDetails" :key="education.degree" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
                 :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -95,12 +95,12 @@
                 :delay="10"
                 :duration="1200">
                     <div class="w-full flex items-center gap-4">
-                        <div class="flex items-center gap-3 text-slate-100/50">
+                        <div class="flex items-center gap-3 text-secText">
                             <Unicon name="calender" fill="#fff" width="21" height="21" />
                             <span>{{ education.s_year }}</span>
                         </div>
                         <div>-</div>    
-                        <div class="flex items-center gap-3 text-slate-100/50">
+                        <div class="flex items-center gap-3 text-secText">
                             <Unicon name="calendar-slash" fill="#fff" width="21" height="21"/>
                             <span>{{ education.e_year }}</span>
                         </div>
@@ -109,11 +109,11 @@
                         <Unicon name="graduation-cap" fill="#fff" width="21" height="21"/>
                         <span>{{ education.degree }}</span>
                     </div>
-                    <div class="text-slate-100/50 flex items-center gap-3">
+                    <div class="text-secText flex items-center gap-3">
                         <Unicon name="book-open" fill="#fff" width="21" height="21"/>
                         <span>{{ education.source }}</span>
                     </div>
-                    <div class="text-justify">
+                    <div class="text-justify text-secText">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
                     </div>
                 </div>
@@ -121,8 +121,8 @@
 
 
             <!-- Skill Section -->
-            <div class="w-full h-fit backdrop-blur-3xl bg-gradient-to-br from-indigo-800/20 via-sky-800/20 to-violet-800/20 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl">SKILL</div>
+            <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
+                <div class="text-2xl text-green-500">SKILL</div>
                     <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col"
                     v-motion
                     :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -132,7 +132,7 @@
                         <div class="text-start text-text text-lg">{{ skill.title }}</div>
                         <template class="w-full grid grid-cols-12 gap-6 p-5">
                             <div v-for="(item, idx) in skill.skill" :key="idx" class="w-full flex flex-col items-start gap-2 col-span-6">
-                                <div class="text-xl text-text">{{ item?.name }}</div>
+                                <div class="text-xl text-secText">{{ item?.name }}</div>
                                 <div class="w-full bg-slate-100/10 rounded-full dark:bg-gray-700">
                                     <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item?.value}`}"> {{ item?.value }}</div>
                                 </div>
