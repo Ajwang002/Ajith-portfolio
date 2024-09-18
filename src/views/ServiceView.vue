@@ -16,7 +16,7 @@
                         <div class="w-2/12 aspect-square flex justify-center items-center  bg-slate-100/10 rounded-full cursor-pointer">
                             <Unicon :name="service.icon" fill="#A1A1AA" hover-fill="#fff" width="24" height="24" class="group-hover:text-green-500"/>
                         </div>
-                        <span class="text-xl font-medium group-hover:text-green-500" :class="selectedService?.name === service.name ? 'text-green-500' : ''">{{ service.name }}</span>
+                        <span class="text-xl font-medium group-hover:text-green-500" :class="selectedService?.name === service.name ? 'text-important' : ''">{{ service.name }}</span>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 :variants="{ custom: { scale: 2 } }"
                 :delay="50"
                 :duration="1200">
-                    <div class="text-4xl">{{ selectedService?.splitName[0] }} <span v-if="selectedService?.splitName[1]" class="text-green-500">{{ selectedService?.splitName[1] }}</span></div>
+                    <div class="text-4xl">{{ selectedService?.splitName[0] }} <span v-if="selectedService?.splitName[1]" class="text-important">{{ selectedService?.splitName[1] }}</span></div>
                     <div class="text-justify text-secText">{{ selectedService?.content }}</div>
                     <div class="flex items-center gap-4 text-text text-sm">
                         <div v-for="(keyword, idx) in selectedService?.keyWords" :key="keyword" class="rounded-2xl px-5 py-1.5" :style="`background: ${keywordBgClr(idx)}`">
@@ -72,7 +72,7 @@
                             Credentials
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5" @click="useNavigation('/credential')">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5" @click="useNavigation('/credential')">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             Profiles
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5" @click="null">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5" @click="null">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -125,10 +125,10 @@
                             Let's
                         </div>
                         <div class="text-text text-5xl font-bold">
-                            Work <span class="text-green-500">together.</span>
+                            Work <span class="text-important">together.</span>
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5" @click="useNavigation('/contacts')">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5" @click="useNavigation('/contacts')">
                         <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>

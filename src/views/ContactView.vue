@@ -30,7 +30,7 @@
             :variants="{ custom: { scale: 2 } }"
             :delay="50"
             :duration="1200">
-                <div class="text-5xl text-start text-text">Let's work <span class="text-green-500">together</span></div>
+                <div class="text-5xl text-start text-text">Let's work <span class="text-important">together</span></div>
                 <form action="#" class="space-y-8">
                     <div class="text-secText">
                         <label for="name" class="block mb-2 text-sm font-medium text-start">Name <strong class="text-error"> *</strong></label>
@@ -48,7 +48,7 @@
                         <label for="message" class="block mb-2 text-sm font-medium  text-start">Message</label>
                         <textarea v-model="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gradient-to-br from-slate-500/20 to-slate-500/10 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your message here ..."></textarea>
                     </div>
-                    <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-500 border-none">Send message</button>
+                    <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-br from-red-500 to-red-600 border-none">Send message</button>
                 </form>
             </div>
         </section>

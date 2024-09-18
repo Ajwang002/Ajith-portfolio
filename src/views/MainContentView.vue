@@ -84,7 +84,7 @@
                                     Credentials
                                 </div>
                             </div>
-                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5" @click="useNavigation('/credential')">
+                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5" @click="useNavigation('/credential')">
                                 <ArrowRightIcon class="text-text w-5 h-5"/>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                     Portfolios
                                 </div>
                             </div>
-                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
+                            <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5 ">
                                <ArrowRightIcon class="text-text w-5 h-5"/>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                             Download
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5 ">
                         <ArrowDownTrayIcon class="text-text w-6 h-6"/>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                             Services Offering
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5 ">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600  cursor-pointer px-5 ">
                        <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                             Profiles
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500  cursor-pointer px-5">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5">
                        <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                             Work <span class="text-important">together.</span>
                         </div>
                     </div>
-                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-green-500 cursor-pointer px-5 " @click="useNavigation('/contacts')">
+                    <div class="h-10 flex justify-center items-center text-text rounded-xl bg-red-700/20 border-2 border-red-600 cursor-pointer px-5 " @click="useNavigation('/contacts')">
                        <ArrowRightIcon class="text-text w-5 h-5"/>
                     </div>
                 </div>

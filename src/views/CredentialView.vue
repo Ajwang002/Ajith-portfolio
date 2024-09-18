@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="w-full h-10 flex justify-center items-center text-text rounded-3xl bg-gray-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
+            <div class="w-full h-10 flex justify-center items-center text-text rounded-3xl bg-red-600/40 cursor-pointer px-5 animate-pulse hover:animate-none">
                 <span class="font-medium">Contact Me</span>
             </div>
         </section>
@@ -45,7 +45,7 @@
             :visible-once="{ opacity: 1, y: 0, scale: 1 }"
             :delay="10"
             :duration="1200">
-                <div class="text-2xl text-green-500 text-start">ABOUT ME</div>
+                <div class="text-2xl text-important text-start">ABOUT ME</div>
                 <div class="text-justify text-secText">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi deserunt fugiat, magnam eligendi cumque temporibus repudiandae asperiores libero quisquam enim inventore accusantium itaque id molestias officia, blanditiis non ea optio!
                 </div>
@@ -53,7 +53,7 @@
 
             <!-- Experience Section -->
             <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl text-green-500">EXPERIENCE</div>
+                <div class="text-2xl text-important">EXPERIENCE</div>
                 <div v-for="(experience, idx) in experienceDetails" :key="experience.role" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
                 :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -87,7 +87,7 @@
 
             <!-- Education Section -->
             <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl text-green-500">EDUCATION</div>
+                <div class="text-2xl text-important">EDUCATION</div>
                 <div v-for="(education, idx) in educationDetails" :key="education.degree" class="flex flex-col gap-2" :class="idx !== (experienceDetails.length -1) ? 'mb-6' : '' "
                 v-motion
                 :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -122,7 +122,7 @@
 
             <!-- Skill Section -->
             <div class="w-full h-fit backdrop-blur-md bg-blue-500/10 border-2 border-indigo-700/70 p-5 flex flex-col gap-3 items-start rounded-2xl">
-                <div class="text-2xl text-green-500">SKILL</div>
+                <div class="text-2xl text-important">SKILL</div>
                     <div v-for="skill in skillDetails" :key="skill.title" class="w-full flex flex-col"
                     v-motion
                     :initial="{ opacity: 0, y: 100, scale: 0}"
@@ -132,9 +132,9 @@
                         <div class="text-start text-text text-lg">{{ skill.title }}</div>
                         <template class="w-full grid grid-cols-12 gap-6 p-5">
                             <div v-for="(item, idx) in skill.skill" :key="idx" class="w-full flex flex-col items-start gap-2 col-span-6">
-                                <div class="text-xl text-secText">{{ item?.name }}</div>
+                                <div class="text-lg text-secText">{{ item?.name }}</div>
                                 <div class="w-full bg-slate-100/10 rounded-full dark:bg-gray-700">
-                                    <div class="bg-green-500/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item?.value}`}"> {{ item?.value }}</div>
+                                    <div class="bg-red-600/80 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" :style="{width: `${item?.value}`}"> {{ item?.value }}</div>
                                 </div>
                             </div>
                         </template>
